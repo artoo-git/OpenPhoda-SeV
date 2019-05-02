@@ -1,0 +1,207 @@
+body { 
+	color:#000; 
+	display:block; 
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2vh;
+	margin:0 auto; 
+	overflow:auto; 
+	overflow-x:hidden; 
+	padding:0px; 
+	background:#54a4bd url("../img/Chronic_pain_openphoda.jpg");
+	background-size: auto 92vh; 
+	background-attachment:fixed; 
+	background-position:top center; 
+	background-repeat:no-repeat;}
+img { 
+	border:0; 
+	height:auto; 
+	max-width:100%; 
+	outline:none; 
+	padding-left:5em; 
+	padding-right:5em;} 
+h1 {text-align:center;
+	color:#000; 
+	padding:1.2em 0em 0em 0em;}
+h2 {text-align:center;
+	color:#000; 
+	padding:1em 0em 0em 0em;} 
+h3 {text-align:center; 
+	color:#000; 
+	padding:1em 0em 0em 0em;}
+p  {padding: .5em 0em 0.5em 0em;
+	line-height: 1.5;
+	color:inherit;
+}
+.summary{border-bottom: 1px solid;
+
+}
+.summary tr th {border-bottom: 1px solid;}
+.summary tr td:nth-child(1) {
+
+}
+.summary tr td:nth-child(2) {
+	
+}
+.experiment{
+	padding: .5em;
+}
+.experiment tr td{
+	padding-top: .8em;
+}
+.sections{
+	text-align:left;
+	display: inline-block;
+	padding: 3% 2% 0% 2%;
+	color:inherit;
+	width: 100%;
+	}      
+    .sections p { 
+    	padding:.5em 0em 0.5em 0em;
+		line-height: 1.5;
+		color:inherit;}
+	.sections a {
+			color:inherit;
+			padding-right:0em;
+		transition: all 0.3s ease-in;}
+	.section a:link{
+		color:inherit;
+		text-decoration:none;}
+	.sections a:hover { 
+		color:#0000FF; 
+		text-decoration:underline; }
+.boxcenter { 
+	background-color:#FFF; 
+	color:#303030; 
+	font-size: 2vh; 
+	line-height:1.5; 
+	margin:62vh auto 0% auto ; 
+	padding:0% 5% 0% 5%; 
+	word-wrap: break-word;} 
+	.boxcenter a:link { 
+		color:#303030; 
+		text-decoration:none;} 
+	.boxcenter a:hover { 
+		color:#0000FF; 
+		text-decoration:underline; }
+	.boxcenter1 { 
+		background-color:#FFF; 
+		color:#303030; 
+		font-size: 2vh; 
+		line-height:1.5; 
+		margin:25% auto 0% auto; 
+		padding:0% 5% 0% 5%; 
+		word-wrap: break-word;} 
+.menu{
+	font-size: 1.7em;
+	text-align:left;
+	font-weight: bold;
+	float:left;}
+	.menu a {
+		color:#000000; 
+		padding-right:1em;
+		transition: all 0.3s ease-in;
+  		text-decoration:none;
+  	}
+.button {
+	background-color:#3bb3e0;
+	padding:10px;
+	position:relative;
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+	text-decoration:none;
+	color:#fff;
+	border: solid 1px #186f8f;
+	background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(44,160,202)),
+		color-stop(1, rgb(62,184,229))
+		
+	);
+	-webkit-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+	-moz-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+	box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+.button::before {
+	background-color:#ccd0d5;
+	content:"";
+	display:block;
+	position:absolute;
+	width:100%;
+	height:100%;
+	padding:8px;
+	left:-8px;
+	top:-8px;
+	z-index:-1;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-moz-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-o-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+}
+
+.button:active {
+	padding-bottom:9px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:11px;
+	top:1px;
+	background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(62,184,229)),
+	color-stop(1, rgb(44,160,202))
+	);}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;}
+
+.autocomplete-items div {
+  padding: 0.2vh;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 1.5vh;
+  border-bottom: 1px solid #d4d4d4;}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
