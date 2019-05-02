@@ -2,7 +2,6 @@
 
 /**
  * Configuration for: Database Connection
- *
  * DB_HOST: database host, usually it's "127.0.0.1" or "localhost", some servers also need port info
  * DB_NAME: name of the database. please note: database and database table are not the same thing
  * DB_USER: user for your database. the user needs to have rights for SELECT, UPDATE, DELETE and INSERT.
@@ -12,7 +11,7 @@
 define("DB_HOST", "phodasev.local"); // add your host address
 define("DB_NAME", "phodasev"); // add your database name here
 define("DB_USER", "phodaer"); // add your database user here
-define("DB_PASS", "8<H2:;-%RT:~zCfX3>Gd"); // add your user password here
+define("DB_PASS", "y5H2:263$%yrhfX3>Gd"); // add your user password here
 
 /**
  * Configuration for: Cookies
@@ -24,7 +23,7 @@ define("DB_PASS", "8<H2:;-%RT:~zCfX3>Gd"); // add your user password here
  */
 define("COOKIE_RUNTIME", 3600);
 define("COOKIE_DOMAIN", "phodasev.local");
-define("COOKIE_SECRET_KEY", "**22!MAYOR!provide!TINY!58**");
+define("COOKIE_SECRET_KEY", "**SHORTS-captivate-AGNOSTIC-factor**43");
 
 /**
  * Configuration for: Hashing strength
