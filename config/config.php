@@ -12,7 +12,7 @@
 define("DB_HOST", "phodasev.local"); // add your host address
 define("DB_NAME", "phodasev"); // add your database name here
 define("DB_USER", "phodaer"); // add your database user here
-define("DB_PASS", "8<H2:;-%RT:~zCfX3>Gd"); // add your user password here
+define("DB_PASS", "your database password"); // add your user password here
 
 /**
  * Configuration for: Cookies
@@ -24,7 +24,7 @@ define("DB_PASS", "8<H2:;-%RT:~zCfX3>Gd"); // add your user password here
  */
 define("COOKIE_RUNTIME", 3600);
 define("COOKIE_DOMAIN", "phodasev.local");
-define("COOKIE_SECRET_KEY", "**22!MAYOR!provide!TINY!58**");
+define("COOKIE_SECRET_KEY", "your cookie key");
 
 /**
  * Configuration for: Hashing strength
