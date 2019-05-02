@@ -6,10 +6,6 @@
 		Open Phoda-SeV
 	</div>
 	<div>
-		<!-- <div><form method="GET" action="index.php"><input type="hidden" value="it" name="ln">
-		<input type="image" class="flags" src="img/IT.png"  name="ln" alt="Submit" /></form> -->
-		<form method="GET" action="index.php"><input type="hidden" value="en" name="ln">
-		<input type="image" class="flags"  src="img/UK.png"  name="ln" alt="Submit" /></form>
 	</div>
 
 </div>
