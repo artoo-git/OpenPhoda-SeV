@@ -21,5 +21,6 @@ $login = new Login();
         include('views/main.php');
    } else {
         include('views/index.php');
+        
    }
 ?>

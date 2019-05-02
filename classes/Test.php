@@ -150,10 +150,8 @@ class Test
                 ?><script type="text/javascript"> alert("Security token was lost or is invalid, re-enter clients details");
                     window.location.href = "index.php";
                 </script><?php
-            
             }else{
                 
-
                 
                 $results->id[0];
                 //echo $result["measure_hash"];
@@ -174,7 +172,7 @@ class Test
                                     $item = 1;
                                     while ($item <= 40) {?>
                                         <td id="col<?php echo $item;?>"></td><?php
-                                    $item++;
+                                        $item++;
                                     }
                                     ?></tr>
                                 </table>
@@ -229,15 +227,18 @@ class Test
             foreach ($phoda as $key => $value) {
                 if (is_numeric($key) && $key >0 && $key<=40 ){
                     $column = "PHODA_" . $key;
-                }else{error_log("$key value in the $POST is not valid");}
+
+                    $query_string = "UPDATE data SET " . $column . " = :value where measure_hash = :hash";
+                    $query_ajax = $this->db_connection->prepare($query_string);
+                    $query_ajax->bindValue(':hash', $hash, PDO::PARAM_STR);
+                    $query_ajax->bindValue(':value', $value, PDO::PARAM_STR);
+                    $query_ajax->execute();
+                    // error_log($query_data->debugDumpParams());
+                }else{
+                    error_log("$key value in the POST is not valid");
+                }
             }
-                $query_string = "UPDATE data SET " . $column . " = :value where measure_hash = :hash";
-                error_log($query_string);
-                $query_ajax = $this->db_connection->prepare($query_string);
-                $query_ajax->bindValue(':hash', $hash, PDO::PARAM_STR);
-                $query_ajax->bindValue(':value', $value, PDO::PARAM_STR);
-                $query_ajax->execute();
-            // error_log($query_data->debugDumpParams());
+                
         }
     }
 }
