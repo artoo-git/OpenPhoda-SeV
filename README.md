@@ -13,6 +13,8 @@ Open Phoda-SeV is a shortened electronic version of the PHODA (Photograph Series
 
 ## Minimum Requirement
 
+Any webserver running:
+* Apache 2.4.0
 * PHP 7.0.0
 * MySQL 5.7 or mariaDB 10.3
 
