@@ -10,20 +10,23 @@ The university of University of LEUVEN releases a proprietary version of the Pho
 
 Open Phoda-SeV is a shortened electronic version of the PHODA (Photograph Series of Daily Activities), a diagnostic tool using which uses photographs to determine the threat value of different physical activities and movements. Exactly like Phoda-SeV this tool offers a quick and simple way for therapists to create a fear hierarchy for patients that may be influenced by some degree of fear of movement. 
 
-## Reference PHODA
 
-The original PHODA was developed by Maastricht University together with Zuyd University.
-
-Reference: Kugler, K., Wijn, J., Geilen, M., de Jong, J., & Vlaeyen, J. W. S. (1999). The Photograph series of Daily Activities (PHODA). CD-rom version 1.0.
-
-Reference Phoda-SeV
-
-Phoda-SeV was developed by Maastricht University. If Phoda-SeV is used for research purposes resulting in a publication or presentation, we request you to use the following reference:
-
-Leeuw, M., Goossens, M. E. J. B., van Breukelen, G. J. P., Boersma, K., & Vlaeyen, J. W. S. (2007). Measuring perceived harmfulness of physical activities in patients with chronic low back pain: the Photograph Series of Daily Activities - Short electronic Version. Journal of Pain, 8, 840-849.
-
-
-## Minimum Requirement##
+## Minimum Requirement
 
 * PHP 7.0.0
 * MySQL 5.7 or mariaDB 10.3
+
+
+## Reference PHODA
+
+The original PHODA was developed by Maastricht University together with Zuyd University. Reference: 
+
+>Kugler, K., Wijn, J., Geilen, M., de Jong, J., & Vlaeyen, J. W. S. (1999). The Photograph series of Daily Activities (PHODA). CD-rom version 1.0.
+
+### Reference Phoda-SeV
+
+Phoda-SeV was developed by Maastricht University. If Phoda-SeV is used for research purposes resulting in a publication or presentation, we request you to use the following reference:
+
+> Leeuw, M., Goossens, M. E. J. B., van Breukelen, G. J. P., Boersma, K., & Vlaeyen, J. W. S. (2007). Measuring perceived harmfulness of physical activities in patients with chronic low back pain: the Photograph Series of Daily Activities - Short electronic Version. Journal of Pain, 8, 840-849.
+
+

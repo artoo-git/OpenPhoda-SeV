@@ -1,3 +1,4 @@
 # log files
 *.log
 /config/config.php
+#/pics/*
