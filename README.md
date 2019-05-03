@@ -11,6 +11,13 @@ The university of University of LEUVEN releases a proprietary version of the Pho
 Open Phoda-SeV is a shortened electronic version of the PHODA (Photograph Series of Daily Activities), a diagnostic tool using which uses photographs to determine the threat value of different physical activities and movements. Exactly like Phoda-SeV this tool offers a quick and simple way for therapists to create a fear hierarchy for patients that may be influenced by some degree of fear of movement. 
 
 
+### Screenshots
+
+![Alt text](https://ibb.co/tXhncZ3 "Title page")
+![Alt text](https://ibb.co/hcWfGzf "Experiemnt login/register")
+![Alt text](https://ibb.co/k0Ff9jg "Experiment management")
+![Alt text](https://ibb.co/RbhDTMt "oPhoda interface")
+
 ## Minimum Requirement
 
 Any webserver running:

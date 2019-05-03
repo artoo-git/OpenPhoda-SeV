@@ -246,7 +246,7 @@ class Login
         session_destroy();
 
         $this->exp_is_logged_in = false;
-        $this->messages[] = MESSAGE_LOGGED_OUT;
+        header("location:index.php");
        
     }
 
