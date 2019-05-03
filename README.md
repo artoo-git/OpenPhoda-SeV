@@ -13,13 +13,13 @@ Open Phoda-SeV is a shortened electronic version of the PHODA (Photograph Series
 
 ### Screenshots
 
-![Title page](https://ibb.co/tXhncZ3 "Title page")
+![Title page](https://i.ibb.co/7Cg1tTB/2019-05-03-185314-1879x928-scrot.png "Title page")
 
-![Experiemnt login/register](https://ibb.co/hcWfGzf "Experiemnt login/register")
+![Experiemnt login/register](https://i.ibb.co/K7HkLdj/2019-05-03-185335-1274x883-scrot.png "Experiemnt login/register")
 
-![Experiment management](https://ibb.co/k0Ff9jg "Experiment management")
+![Experiment management](https://i.ibb.co/W0ytrJt/2019-05-03-185411-1453x830-scrot.png "Experiment management")
 
-![oPhoda interface](https://ibb.co/RbhDTMt "oPhoda interface")
+![oPhoda interface](https://i.ibb.co/7Cg1tTB/2019-05-03-185314-1879x928-scrot.png "oPhoda interface")
 
 ## Minimum Requirement
 
