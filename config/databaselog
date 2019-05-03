@@ -1,4 +1,4 @@
-PHODA-SEV DB log
+HODA-SEV DB log
 
 
 # create database
@@ -12,13 +12,80 @@ CREATE DATABASE phodasev;
 	ALTER DATABASE phodasev CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 #create experiment login
-CREATE TABLE `experiments` (`id` int(11) NOT NULL AUTO_INCREMENT,`exp_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,`exp_password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,`exp_rememberme_token` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL, `exp_registration_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00', `exp_n_cond` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,  `exp_princ_inv` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL, PRIMARY KEY (`id`), UNIQUE KEY `exp_name` (`exp_name`)) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `experiments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `exp_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `exp_password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `exp_rememberme_token` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `exp_registration_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `exp_n_cond` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `exp_princ_inv` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `exp_name` (`exp_name`)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 #create subjects table
-CREATE TABLE `subjects` (`id` int(11) NOT NULL AUTO_INCREMENT,`patientID` varchar(64) COLLATE utf8_unicode_ci NOT NULL,`exp_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,   `reg_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00', PRIMARY KEY (`id`), UNIQUE KEY `patientID` (`patientID`)) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `subjects` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `patientID` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `exp_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `reg_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `patientID` (`patientID`)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 #create data table
-	CREATE TABLE `data` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `measure_hash` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL, `exp_id` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,  `thrpstID` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,  `patientID` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL, `session` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL, `exp_cond` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL, `session_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',  `PHODA_TOT` tinyint(4) DEFAULT NULL,  `PHODA_1` tinyint(4) DEFAULT NULL,  `PHODA_2` tinyint(4) DEFAULT NULL,  `PHODA_3` tinyint(4) DEFAULT NULL,  `PHODA_4` tinyint(4) DEFAULT NULL,  `PHODA_5` tinyint(4) DEFAULT NULL,  `PHODA_6` tinyint(4) DEFAULT NULL,  `PHODA_7` tinyint(4) DEFAULT NULL,  `PHODA_8` tinyint(4) DEFAULT NULL,  `PHODA_9` tinyint(4) DEFAULT NULL,  `PHODA_10` tinyint(4) DEFAULT NULL,  `PHODA_11` tinyint(4) DEFAULT NULL,  `PHODA_12` tinyint(4) DEFAULT NULL,  `PHODA_13` tinyint(4) DEFAULT NULL,  `PHODA_14` tinyint(4) DEFAULT NULL,  `PHODA_15` tinyint(4) DEFAULT NULL,  `PHODA_16` tinyint(4) DEFAULT NULL,  `PHODA_17` tinyint(4) DEFAULT NULL,  `PHODA_18` tinyint(4) DEFAULT NULL,  `PHODA_19` tinyint(4) DEFAULT NULL,  `PHODA_20` tinyint(4) DEFAULT NULL,  `PHODA_21` tinyint(4) DEFAULT NULL,  `PHODA_22` tinyint(4) DEFAULT NULL,  `PHODA_23` tinyint(4) DEFAULT NULL,  `PHODA_24` tinyint(4) DEFAULT NULL,  `PHODA_25` tinyint(4) DEFAULT NULL,  `PHODA_26` tinyint(4) DEFAULT NULL,  `PHODA_27` tinyint(4) DEFAULT NULL,  `PHODA_28` tinyint(4) DEFAULT NULL,  `PHODA_29` tinyint(4) DEFAULT NULL,  `PHODA_30` tinyint(4) DEFAULT NULL,  `PHODA_31` tinyint(4) DEFAULT NULL,  `PHODA_32` tinyint(4) DEFAULT NULL,  `PHODA_33` tinyint(4) DEFAULT NULL,  `PHODA_34` tinyint(4) DEFAULT NULL,  `PHODA_35` tinyint(4) DEFAULT NULL,  `PHODA_36` tinyint(4) DEFAULT NULL,  `PHODA_37` tinyint(4) DEFAULT NULL,  `PHODA_38` tinyint(4) DEFAULT NULL,  `PHODA_39` tinyint(4) DEFAULT NULL,  `PHODA_40` tinyint(4) DEFAULT NULL,  PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+	CREATE TABLE `data` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `measure_hash` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `exp_id` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `thrpstID` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `patientID` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `session` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `exp_cond` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `session_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `PHODA_1` tinyint(4) DEFAULT NULL,
+  `PHODA_2` tinyint(4) DEFAULT NULL,
+  `PHODA_3` tinyint(4) DEFAULT NULL,
+  `PHODA_4` tinyint(4) DEFAULT NULL,
+  `PHODA_5` tinyint(4) DEFAULT NULL,
+  `PHODA_6` tinyint(4) DEFAULT NULL,
+  `PHODA_7` tinyint(4) DEFAULT NULL,
+  `PHODA_8` tinyint(4) DEFAULT NULL,
+  `PHODA_9` tinyint(4) DEFAULT NULL,
+  `PHODA_10` tinyint(4) DEFAULT NULL,
+  `PHODA_11` tinyint(4) DEFAULT NULL,
+  `PHODA_12` tinyint(4) DEFAULT NULL,
+  `PHODA_13` tinyint(4) DEFAULT NULL,
+  `PHODA_14` tinyint(4) DEFAULT NULL,
+  `PHODA_15` tinyint(4) DEFAULT NULL,
+  `PHODA_16` tinyint(4) DEFAULT NULL,
+  `PHODA_17` tinyint(4) DEFAULT NULL,
+  `PHODA_18` tinyint(4) DEFAULT NULL,
+  `PHODA_19` tinyint(4) DEFAULT NULL,
+  `PHODA_20` tinyint(4) DEFAULT NULL,
+  `PHODA_21` tinyint(4) DEFAULT NULL,
+  `PHODA_22` tinyint(4) DEFAULT NULL,
+  `PHODA_23` tinyint(4) DEFAULT NULL,
+  `PHODA_24` tinyint(4) DEFAULT NULL,
+  `PHODA_25` tinyint(4) DEFAULT NULL,
+  `PHODA_26` tinyint(4) DEFAULT NULL,
+  `PHODA_27` tinyint(4) DEFAULT NULL,
+  `PHODA_28` tinyint(4) DEFAULT NULL,
+  `PHODA_29` tinyint(4) DEFAULT NULL,
+  `PHODA_30` tinyint(4) DEFAULT NULL,
+  `PHODA_31` tinyint(4) DEFAULT NULL,
+  `PHODA_32` tinyint(4) DEFAULT NULL,
+  `PHODA_33` tinyint(4) DEFAULT NULL,
+  `PHODA_34` tinyint(4) DEFAULT NULL,
+  `PHODA_35` tinyint(4) DEFAULT NULL,
+  `PHODA_36` tinyint(4) DEFAULT NULL,
+  `PHODA_37` tinyint(4) DEFAULT NULL,
+  `PHODA_38` tinyint(4) DEFAULT NULL,
+  `PHODA_39` tinyint(4) DEFAULT NULL,
+  `PHODA_40` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 # create USER "phodaer"

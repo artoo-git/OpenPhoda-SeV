@@ -1,6 +1,6 @@
 <?php include('_headerTest.php');
 
-if ($_SESSION['exp_logged_in'] === 1) {
+if ($login->isexpLoggedIn() == true) {
 
 	// load the Experiment/Testing class
 	require_once('classes/Test.php');

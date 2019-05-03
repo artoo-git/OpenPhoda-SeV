@@ -21,8 +21,8 @@ interact('.draggable')
       //var textEl = event.target.querySelector('p');
       var element = document.getElementById(event.target.id);
       var pos = element.getBoundingClientRect();
-      var position = (pos.left/document.getElementById('container').offsetWidth)*100;
-      
+      var positionFloat = (pos.left/document.getElementById('container').offsetWidth)*100;
+      var position = parseFloat(positionFloat).toFixed(0);
       var hash = window.location.search.substr(1);
       var postdata = "item["+ event.target.id + "]=" + parseFloat(position).toFixed(0) + "&ajax=1&" + hash;
 
@@ -32,7 +32,8 @@ interact('.draggable')
       //Update table
       var cellId = "col" + event.target.id;
       var cell= document.getElementById(cellId);
-      cell.innerHTML = parseFloat(position).toFixed(0);      
+      cell.innerHTML = position;
+      
     }
   });
 

@@ -24,22 +24,36 @@ class Test
 
     public function __construct()
     {
+        // opening a new measure in the DB
        if (isset($_POST['NewTest'])){
-            $this->newMeasure(
+            $this->newPhoda(
                 $_SESSION['exp_id'],
                 $_POST['thrpstID'],
                 $_POST['patientID'],
                 $_POST['session'],
                 $_POST['condition']);
         }
+        // draw oPhoda interface
         else if (isset($_GET['m'])){
             $this->setupPhoda($_GET['m']);
         }
-        if (isset($_POST['m']) && isset($_POST['item'])){
+        // post live data via ajax calls
+        else if (isset($_POST['m']) && isset($_POST['item'])){
             
             $this->updatePhoda($_POST['m'], $_POST['item']);
         }
-        else{}
+        // abort measure when a specific user POST call is made
+        else if(isset($_POST['abort'])) {
+
+            $this->abortPhoda($_POST['abort'], $_SESSION['exp_id']);
+
+        }
+        // submit measure when a specific user POST call is made
+        else if(isset($_POST['finalise'])) {
+
+            $this->submitPhoda($_POST['finalise'], $_SESSION['exp_id']);
+
+        }
     }
 
     private function databaseConnection()
@@ -75,7 +89,7 @@ class Test
         }
     }
 
-    private function newMeasure($exp_id,$thrpstID,$patientID,$session,$condition)
+    private function newPhoda($exp_id,$thrpstID,$patientID,$session,$condition)
     {   
         
         if ($this->databaseConnection()) {
@@ -121,15 +135,7 @@ class Test
                 $query_subj->execute();
                 header('location: exp.php?m=' . $hash);
             } else{
-                
-                // $query_data = $this->db_connection->prepare('
-                //     SELECT patientID from subjects WHERE exp_id = :exp_id');
-                // $query_data->bindValue(':patientID', $patientID, PDO::PARAM_STR);
-                // $query_data->execute();
 
-                // check if client has any measure
-
-                //echo "antani:" . $this->checkUnique($patientID);
                 ?><script type="text/javascript"> alert("This subject name already exist");
                     window.location.href = "index.php";
                 </script><?php
@@ -145,6 +151,7 @@ class Test
             $query_meas->bindValue(':hash', $hash, PDO::PARAM_STR);
             $query_meas->execute();
             $results = $query_meas->fetchObject();
+            
             // if there is no line corresponding to the hash requested or if there is hash collision something went wrong: re-enter patient detail
             if (!$results or $query_meas->rowCount() >1){
                 ?><script type="text/javascript"> alert("Security token was lost or is invalid, re-enter clients details");
@@ -187,11 +194,15 @@ class Test
                         <td style="width: 100%;text-align: center"></td>
                         <td class="rotateRight"><div>extremely harmful</div></td></tr>
                     </table>
+
+                <form action="exp.php" method="POST" onsubmit="return confirm('Finalise test');">
+                        <input type="hidden" name="finalise" value="<?php echo $hash;?>" />
+                        <button class="submitBtn" type="submit" value="submit">submit</button>
+                </form>
                     
                 <!-- the phoda form that is be updated via ajax-->
                     <form method="POST" action="exp.php"><?php
                     foreach ($photos as $photo) {?>
-
                         <div id="<?php echo $i--;?>"  class="draggable">
                         <img class="image" ondblclick="window.open('pics/<?php echo $photo;?>', 'popup', 'height=400, width=400'); return false;" src="pics/<?php echo $photo;?>">
                         
@@ -208,8 +219,13 @@ class Test
 
                 <table align="bottom" style="padding: 93vh 10vh 0vh 5vh; width: 100%;">
                     <tr>
-                    <td><input class="button" type="button" onclick="location.href='index.php';" value="Stop/cancel" />
+                    <td>
+                        <form action="exp.php" method="POST" onsubmit="return confirm('This will abort the current test');">
+                        <input type="hidden" name="abort" value="<?php echo $hash;?>" />
+                        <button class="button" type="submit" value="cancel">cancel</button>
+                        </form>
                     </td>
+                    
                     <td style="text-align: right;">
                         <form action="exp.php" method="GET">
                         <input type="hidden" name="logout" value = "logout">
@@ -238,6 +254,31 @@ class Test
                     error_log("$key value in the POST is not valid");
                 }
             }
+                
+        }
+    }
+
+    private function submitPhoda($hash,$exp_id){
+        if ($this->databaseConnection()) {
+
+           $query_submit = $this->db_connection->prepare('UPDATE data SET measure_hash = NULL WHERE measure_hash = :hash  AND exp_id = :exp_id LIMIT 1');
+            $query_submit->bindValue(':hash', $hash, PDO::PARAM_STR);
+            $query_submit->bindValue(':exp_id', $exp_id, PDO::PARAM_STR);
+            $query_submit->execute();
+            //error_log($query_submit->debugDumpParams());
+            header('location:index.php');
+                
+        }
+    }
+
+    private function abortPhoda($hash,$exp_id){
+        if ($this->databaseConnection()) {
+
+            $query_abort = $this->db_connection->prepare('DELETE FROM data WHERE measure_hash = :hash AND exp_id = :exp_id LIMIT 1');
+            $query_abort->bindValue(':hash', $hash, PDO::PARAM_STR);
+            $query_abort->bindValue(':exp_id', $exp_id, PDO::PARAM_STR);
+            $query_abort->execute();
+            header('location:index.php');
                 
         }
     }

@@ -110,20 +110,44 @@ class Main
     private function drawSummary($exp_id)
     {
         if ($this->getexpInfo($exp_id) != NULL){
-            $summary = $this->getexpInfo($exp_id);?>
+            $summaryA = $this->getexpInfo($exp_id);?>
             <table class="summary">
             <tr><th colspan="2">Summary</th>
             <tr><td>Experiment name: </td>
-                <td><?php echo $summary->exp_name;?></td>
+                <td><?php echo $summaryA->exp_name;?></td>
             </tr>
             <tr><td>Created on: </td>
-                <td><?php echo $summary->exp_registration_datetime;?></td>
+                <td><?php echo $summaryA->exp_registration_datetime;?></td>
             </tr>
             <tr><td>P.I. :</td>
-                <td><?php echo $summary->exp_princ_inv;?></td>
+                <td><?php echo $summaryA->exp_princ_inv;?></td>
             </tr>
             <tr><td>Experimental conditions :</td>
-                <td><?php echo $summary->exp_n_cond;?></td></tr>
+                <td><?php echo $summaryA->exp_n_cond;?></td></tr>
+            </table>            
+            <?php
+        }
+        if ($this->getexpData($exp_id) != NULL){
+            
+            $summaryB = $this->getexpData($exp_id);
+            $phodaTot = array();
+            foreach($summaryB as $data){
+                $mean = ($data->PHODA_1 + $data->PHODA_2 + $data->PHODA_3 + $data->PHODA_4 + $data->PHODA_5 +
+                            $data->PHODA_6 + $data->PHODA_7 + $data->PHODA_8 + $data->PHODA_9 + $data->PHODA_10 +
+                            $data->PHODA_11 + $data->PHODA_12 + $data->PHODA_13 + $data->PHODA_14 + $data->PHODA_15 +
+                            $data->PHODA_16 + $data->PHODA_17 + $data->PHODA_18 + $data->PHODA_19 + $data->PHODA_20 +
+                            $data->PHODA_21 + $data->PHODA_22 + $data->PHODA_23 + $data->PHODA_24 + $data->PHODA_25 +
+                            $data->PHODA_26 + $data->PHODA_27 + $data->PHODA_28 + $data->PHODA_29 + $data->PHODA_30 +
+                            $data->PHODA_31 + $data->PHODA_32 + $data->PHODA_33 + $data->PHODA_34 + $data->PHODA_35 +
+                            $data->PHODA_36 + $data->PHODA_37 + $data->PHODA_38 + $data->PHODA_39 + $data->PHODA_40)/40;
+            array_push($phodaTot, round($mean));
+            }
+            
+
+            ?>
+
+            <table class="summary">
+            
             </table>            
             <?php
         }  

@@ -9,7 +9,7 @@
 	<!-- CSS & Fonts -->
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans+Mono" />
 		<?php
-		if ($_SESSION['exp_logged_in'] === 1){?>
+		if ($login->isexpLoggedIn() == true){?>
 
 			<link href="css/test.css" rel="stylesheet" />
 

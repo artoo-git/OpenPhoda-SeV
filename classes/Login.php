@@ -39,7 +39,7 @@ class Login
         } elseif (isset($_POST["exp_name"])) {
             $this->loginWithPostData($_POST['exp_name'], $_POST['exp_password']);
         
-        } elseif ($_SESSION['exp_logged_in'] === 1){
+        } elseif ($this->isexpLoggedIn() == true){
             //do nothing
         } else { 
             $_SESSION = array();

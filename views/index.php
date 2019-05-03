@@ -5,19 +5,17 @@
 	<div class="menu">
 		Open Phoda-SeV
 	</div>
-	<div>
-	</div>
-
 </div>
 
-<div style="background:#FFFFFF">
-	<br>
-
+<div style="background:#FFFFFF; text-align: center;">
+	<br><br><br>
+	<div style="padding-left: 5%;float: left;">
+		<form action="exp.php">	
+			<button class="button" type="submit" value="Begin Test">Access Experiments</button>
+		</form>
+	</div>
 	<div class="sections">
-	
-		<p>Introdution/landing page</p>
-		<p><form action="exp.php">
-			<button class="button" type="submit" value="Begin Test">Access Experiments</button></form></p>	
+		<?php echo LANDING_PAGE; ?>
 	</div>
 
 <?php include('_footer.php');?>
