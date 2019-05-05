@@ -39,7 +39,9 @@ img {
 	border-radius: .8em;
 	padding: 2em 1.5em;
 	line-height: 1.5;}
-
+td{
+	padding: 2px;
+}
 label {
    	position: relative;
    	vertical-align: middle;
