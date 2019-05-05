@@ -135,8 +135,8 @@ float: right;}
   position:absolute;
   top: 85%;
   left: 50%;
-  width: 7em;
-  height: 2.5em;
+  width: 5em;
+  height: 7.5em;
   padding: 0;
    background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
   background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
