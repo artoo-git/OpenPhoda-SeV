@@ -11,8 +11,6 @@
 	    
 	    <tr><td><input id="pi" type="text" name="pi" placeholder="principal investigator" required autocomplete="off" /></td></tr>
 	    
-	    <tr><td><input id="conditions" <input type="text" pattern="\d*" name="conditions" placeholder="number of conditions" required autocomplete="off" /></td></tr> 
-    	
     	<tr><td><button class="button" type="submit" name="register" value="register">register</button></td></tr>
 	</form>
 	</table>

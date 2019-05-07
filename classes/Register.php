@@ -44,7 +44,7 @@ class Register
         
         if (isset($_POST["register"])) {
 
-            $this->registerNewExp($_POST['exp_name'], $_POST['password'],$_POST['conditions'],$_POST['pi']);
+            $this->registerNewExp($_POST['exp_name'], $_POST['password'],$_POST['pi']);
             
         }
     }
@@ -76,7 +76,7 @@ class Register
     }
 
 
-    private function registerNewExp($exp_name, $exp_password,$exp_n_cond,$exp_princ_inv)
+    private function registerNewExp($exp_name, $exp_password,$exp_princ_inv)
     {
         // we just remove extra space on expname 
         $exp_name  = trim($exp_name);
@@ -114,19 +114,16 @@ class Register
                 $q_ins_new_exp = $this->db_connection->prepare("INSERT INTO experiments (
                         exp_name, 
                         exp_password_hash, 
-                        exp_n_cond,
                         exp_princ_inv,
                         exp_registration_datetime) 
                     VALUES(
                         :exp_name, 
                         :exp_password_hash, 
-                        :exp_n_cond,
                         :exp_princ_inv,
                         NOW())");
 
                 $q_ins_new_exp->bindValue(':exp_name', $exp_name, PDO::PARAM_STR);
                 $q_ins_new_exp->bindValue(':exp_password_hash', $exp_password_hash, PDO::PARAM_STR);
-                $q_ins_new_exp->bindValue(':exp_n_cond', $exp_n_cond, PDO::PARAM_STR);
                 $q_ins_new_exp->bindValue(':exp_princ_inv', $exp_princ_inv, PDO::PARAM_STR);
                 $q_ins_new_exp->execute();
                 #$q_ins_new_exp->debugDumpParams();
