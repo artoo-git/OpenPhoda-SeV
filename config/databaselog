@@ -1,30 +1,45 @@
-HODA-SEV DB log
+PHODA-SEV DB log
 
 
-# create database
-CREATE DATABASE phodasev;
+# login as root: eg. mysql -u root -p and continue to step 1
 
-# Check encoding
+#step 0: allow access using password
+  # use "sudo mysql -u root" in case it is a new installation and you can only access via unix_socket. in this case do as follow:
+
+  USE mysql;
+  UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+  FLUSH PRIVILEGES;
+  exit;
+
+#step 1: create database
+  CREATE DATABASE `phodasev`;
+
+#step 2: create user
+  CREATE USER 'phodaer'@'localhost' IDENTIFIED BY 'YOURPASSWORD';
+  GRANT USAGE ON *.* TO 'phodaer'@'localhost' IDENTIFIED BY 'YOURPASSWORD';
+  GRANT ALL privileges ON `phodasev`.* TO 'phodaer'@'localhost';
+  FLUSH PRIVILEGES;
+
+#Step 3: Check encoding
 	SELECT * FROM information_schema.SCHEMATA;
 	SELECT TABLE_NAME, TABLE_COLLATION, ROW_FORMAT from TABLES where table_schema = 'tablename' \G
 
-# Change encoding to UTF8
+#Step 4: Change encoding to UTF8
 	ALTER DATABASE phodasev CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-#create experiment login
+#Step 5: create experiment login
 CREATE TABLE `experiments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `exp_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `exp_password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `exp_rememberme_token` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
   `exp_registration_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `exp_n_cond` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
   `exp_princ_inv` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `exp_name` (`exp_name`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-#create subjects table
+#Step 6:create subjects table
 CREATE TABLE `subjects` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `patientID` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
@@ -34,7 +49,7 @@ CREATE TABLE `subjects` (
   UNIQUE KEY `patientID` (`patientID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-#create data table
+#Step 7:create data table
 	CREATE TABLE `data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `measure_hash` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -88,10 +103,4 @@ CREATE TABLE `subjects` (
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-# create USER "phodaer"
-CREATE USER `phodaer`@`localhost` IDENTIFIED BY 'amazing mysql password';
-
-
-#grant priviledges to users phodaer
-GRANT INDEX, CREATE, SELECT, INSERT, UPDATE, DELETE, ALTER, LOCK TABLES ON phodasev.* TO 'phodaer'@'localhost';
 
