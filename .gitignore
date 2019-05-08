@@ -2,3 +2,4 @@
 *.log
 /config/config.php
 /pics/*
+/views/_footer.php
