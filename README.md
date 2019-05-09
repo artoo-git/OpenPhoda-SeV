@@ -1,7 +1,7 @@
 # Open-Phoda-SeV
 Open Source version of the Phoda-SeV scale for Chronic Low Back Pain
 
-The university of University of LEUVEN releases a proprietary version of the Phoda-SeV in "Windows" format. I thought it may have been useful to create a version of the software which (provided that a browser and internet connection is available) is capable to:
+The university of University of LEUVEN releases a proprietary version of the Phoda-SeV for MS Windows computers. I thought it may have been useful to create a version of the software which (provided that a browser and internet connection is available) is capable to:
 
 * run on any possible machine at any time 
 * add data to a single, fast and reliable relational database
@@ -13,20 +13,19 @@ Open Phoda-SeV is a shortened electronic version of the PHODA (Photograph Series
 
 ### Screenshots
 
-![Title page](https://i.postimg.cc/bwQH3XS1/2019-05-03-185314-1879x928-scrot.png "Title page")
+![Title page](https://i.postimg.cc/Gh9kNLrg/2019-05-09-123856-1895x935-scrot.png "Title page")
 
-![Experiemnt login/register](https://i.postimg.cc/GpdPfMvV/2019-05-03-185335-1274x883-scrot.png "Experiemnt login/register")
-
-![Experiment management](https://i.postimg.cc/sgF4YfxV/2019-05-03-185411-1453x830-scrot.png "Experiment management")
+![Experiemnt login/register](https://i.postimg.cc/FFTyDdtJ/2019-05-09-123921-1912x935-scrot.png "Experiemnt login/register")
 
 ![oPhoda interface](https://i.postimg.cc/15VKVV9C/2019-05-03-185434-1856x920-scrot.png "oPhoda interface")
+
 
 ## Minimum Requirement
 
 Any webserver running:
-* Apache 2.4.0
-* PHP 7.0.0
-* MySQL 5.7 or mariaDB 10.3
+* Apache 2.4.0 (or NGNIX)
+* PHP 7.0.0+
+* MySQL 5.7+ or mariaDB 10.3+
 
 
 ## Reference PHODA
