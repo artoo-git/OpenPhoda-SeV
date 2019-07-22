@@ -29,22 +29,22 @@ define('LANDING_PAGE', '
 	<p>Any webserver running:</p>
 
 	<ul>
-	<li>Apache 2.4.0</li>
+	<li>Apache 2.4.0+ (or NGNIX)</li>
 
-	<li>PHP 7.0.0</li>
+	<li>PHP 7.0.0+</li>
 
-	<li>MySQL 5.7 or mariaDB 10.3</li>
+	<li>MySQL 5.7+ or mariaDB 10.3+</li>
 	</ul>
 
-	<h2 id="referencephoda">Reference PHODA</h2>
-
+	<h2 id="referencephoda">References </h2>
+	<h3>PHODA</h3>
 	<p>The original PHODA was developed by Maastricht University together with Zuyd University. Reference: </p>
 
 	<blockquote>
 	 <p><a href="https://books.google.co.uk/books/about/The_Photograph_series_of_daily_activitie.html?id=EcgsQwAACAAJ&redir_esc=y">Kugler, K., Wijn, J., Geilen, M., de Jong, J., &amp; Vlaeyen, J. W. S. (1999). The Photograph series of Daily Activities (PHODA). CD-rom version 1.0.</a></p>
 	</blockquote>
 
-	<h3 id="referencephodasev">Reference Phoda-SeV</h3>
+	<h3 id="referencephodasev">Phoda-SeV</h3>
 
 	<p><a href="https://ppw.kuleuven.be/ogp/labfacilities">Phoda-SeV</a> was developed by Maastricht University. If Phoda-SeV is used for research purposes resulting in a publication or presentation, we request you to use the following reference:</p>
 
