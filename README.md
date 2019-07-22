@@ -6,7 +6,7 @@ The university of University of LEUVEN releases a proprietary version of the Pho
 * run on any possible machine at any time 
 * add data to a single, fast and reliable relational database
 
-## What is Open Phoda-SeV?
+## What is OpenPhoda-SeV?
 
 OpenPhoda-SeV is a shortened electronic version of the PHODA (Photograph Series of Daily Activities), a diagnostic tool using which uses photographs to determine the threat value of different physical activities and movements. Exactly like Phoda-SeV this tool offers a quick and simple way for therapists to create a fear hierarchy for patients that may be influenced by some degree of fear of movement. 
 
