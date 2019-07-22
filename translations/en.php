@@ -8,9 +8,9 @@ define("MESSAGE_DATABASE_ERROR", "Database connection problem.");
 define("MESSAGE_EXPERIMENT_EMPTY;", "Experiment field was empty");
 define("MESSAGE_PASSWORD_EMPTY", "Password field was empty");
 define('LANDING_PAGE', '
-	<h1 id="openphodasev">Open-Phoda-SeV</h1>
+	<h1 id="openphodasev">OpenPhoda-SeV</h1>
 
-	<p><a href="https://github.com/artoo-git/Open-Phoda-SeV">Open Source version of the Phoda-SeV</a> scale for Chronic Low Back Pain</p>
+	<p><a href="https://github.com/artoo-git/OpenPhoda-SeV">Open Source version of the Phoda-SeV</a> scale for Chronic Low Back Pain</p>
 
 	<p>The university of University of LEUVEN releases a proprietary version of the Phoda-SeV in "Windows" format. I thought it may have been useful to create a version of the software which (provided that a browser and internet connection is available) is capable to:</p>
 
@@ -20,9 +20,9 @@ define('LANDING_PAGE', '
 	<li>add data to a single, fast and reliable relational database</li>
 	</ul>
 
-	<h2 id="whatisopenphodasev">What is Open Phoda-SeV?</h2>
+	<h2 id="whatisopenphodasev">What is OpenPhoda-SeV?</h2>
 
-	<p><a href="https://github.com/artoo-git/Open-Phoda-SeV">Open Phoda-SeV</a> is a shortened electronic version of the PHODA (Photograph Series of Daily Activities), a diagnostic tool using which uses photographs to determine the threat value of different physical activities and movements. Exactly like <a href="https://ppw.kuleuven.be/ogp/labfacilities">Phoda-SeV</a> this tool offers a quick and simple way for therapists to create a fear hierarchy for patients that may be influenced by some degree of fear of movement. </p>
+	<p><a href="https://github.com/artoo-git/OpenPhoda-SeV">OpenPhoda-SeV</a> is a shortened electronic version of the PHODA (Photograph Series of Daily Activities), a diagnostic tool using which uses photographs to determine the threat value of different physical activities and movements. Exactly like <a href="https://ppw.kuleuven.be/ogp/labfacilities">Phoda-SeV</a> this tool offers a quick and simple way for therapists to create a fear hierarchy for patients that may be influenced by some degree of fear of movement. </p>
 
 	<h2 id="minimumrequirement">Minimum Requirement</h2>
 

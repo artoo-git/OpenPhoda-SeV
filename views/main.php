@@ -4,7 +4,7 @@
 
 <div style="text-align:left" class="boxcenter">
 	<div class="menu" >
-		Open Phoda-SeV
+		OpenPhoda-SeV
 	</div>
 	<div >
 		
