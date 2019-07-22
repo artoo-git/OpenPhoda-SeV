@@ -1,4 +1,4 @@
-# Open-Phoda-SeV
+# OpenPhoda-SeV
 Open Source version of the Phoda-SeV scale for Chronic Low Back Pain
 
 The university of University of LEUVEN releases a proprietary version of the Phoda-SeV for MS Windows computers. I thought it may have been useful to create a version of the software which (provided that a browser and internet connection is available) is capable to:
@@ -8,7 +8,7 @@ The university of University of LEUVEN releases a proprietary version of the Pho
 
 ## What is Open Phoda-SeV?
 
-Open Phoda-SeV is a shortened electronic version of the PHODA (Photograph Series of Daily Activities), a diagnostic tool using which uses photographs to determine the threat value of different physical activities and movements. Exactly like Phoda-SeV this tool offers a quick and simple way for therapists to create a fear hierarchy for patients that may be influenced by some degree of fear of movement. 
+OpenPhoda-SeV is a shortened electronic version of the PHODA (Photograph Series of Daily Activities), a diagnostic tool using which uses photographs to determine the threat value of different physical activities and movements. Exactly like Phoda-SeV this tool offers a quick and simple way for therapists to create a fear hierarchy for patients that may be influenced by some degree of fear of movement. 
 
 
 ### Screenshots
