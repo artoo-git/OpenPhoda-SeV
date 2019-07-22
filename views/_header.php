@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="ROBOTS" content="NOARCHIVE">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>PHODA-Short Electronic Version</title>
+		<title>OpenPhoda-Short Electronic Version</title>
 	<!-- CSS & Fonts -->
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans+Mono" />
 		<?php
