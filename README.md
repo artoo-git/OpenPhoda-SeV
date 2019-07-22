@@ -28,13 +28,15 @@ Any webserver running:
 * MySQL 5.7+ or mariaDB 10.3+
 
 
-## Reference PHODA
+## References
+
+### Phoda
 
 The original PHODA was developed by Maastricht University together with Zuyd University. Reference: 
 
 >Kugler, K., Wijn, J., Geilen, M., de Jong, J., & Vlaeyen, J. W. S. (1999). The Photograph series of Daily Activities (PHODA). CD-rom version 1.0.
 
-### Reference Phoda-SeV
+### Phoda-SeV
 
 Phoda-SeV was developed by Maastricht University. If Phoda-SeV is used for research purposes resulting in a publication or presentation, we request you to use the following reference:
 
