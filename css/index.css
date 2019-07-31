@@ -6,11 +6,11 @@ body {
 	margin:0 auto; 
 	overflow:auto; 
 	overflow-x:hidden; 
-	padding:0vh; 
+	padding:0vh 0vh 0vh 0vh; 
 	background:#54a4bd url("../img/Chronic_pain_openphoda.jpg");
-	background-size: 100vh auto; 
+	background-size: 120vh auto; 
 	background-attachment:fixed; 
-	background-position:center center; 
+	background-position:top center; 
 	background-repeat:no-repeat;}
 img { 
 	border:0; 
