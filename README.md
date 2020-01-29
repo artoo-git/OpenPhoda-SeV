@@ -1,7 +1,7 @@
 # OpenPhoda-SeV
 Open Source web application for Phoda-SeV: a psychometric scale for Chronic Low Back Pain
 
-The university of University of LEUVEN releases a proprietary version of the Phoda-SeV for MS Windows computers. I thought it may have been useful to create a version of the software which (provided that a browser and internet connection is available) is capable to:
+The University of University of Leuven releases a proprietary version of the Phoda-SeV for MS Windows computers. I thought it may have been useful to create a version of the software which (provided that a browser and internet connection is available) is capable to:
 
 * run on any possible machine at any time 
 * add data to a single, fast and reliable relational database
