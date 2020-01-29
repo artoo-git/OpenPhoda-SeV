@@ -12,7 +12,7 @@ define('LANDING_PAGE', '
 
 	<p><a href="https://github.com/artoo-git/OpenPhoda-SeV">Open Source version of the Phoda-SeV</a> scale for Chronic Low Back Pain</p>
 
-	<p>The university of University of LEUVEN releases a proprietary version of the Phoda-SeV in "Windows" format. I thought it may have been useful to create a version of the software which (provided that a browser and internet connection is available) is capable to:</p>
+	<p>The University of Leuven releases a proprietary version of the Phoda-SeV in "Windows" format. I thought it may have been useful to create a version of the software which (provided that a browser and internet connection is available) is capable to:</p>
 
 	<ul>
 	<li>run on any possible machine at any time </li>
