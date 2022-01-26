@@ -2,7 +2,7 @@
 
 // check for minimum PHP version
 if (version_compare(PHP_VERSION, '7.0.0', '<')) {
-    exit('Sorry, this script does not run on a PHP version smaller than 7.0.0 !');
+    exit('Sorry, this script does not run on a PHP version after 7.0.0 !');
 }
 // include the config
 require_once('config/config.php');
