@@ -24,7 +24,7 @@ define('LANDING_PAGE', '
 	<p>I have installed a fully functioning version of OpenPhoda on this website and it is free to use. I cannot guarantee how long this instance will run but if you are concerned or if you want to know more about OpenPhoda drop me a message <a href="https://www.researchgate.net/profile/diego-vitali"> here </a></p>
 	<h2 id="whatisopenphodasev">What is OpenPhoda-SeV?</h2>
 
-	<p><a href="https://github.com/artoo-git/OpenPhoda-SeV">OpenPhoda-SeV</a> is a shortened electronic version of the PHODA (Photograph Series of Daily Activities), a diagnostic tool using which uses photographs to determine the threat value of different physical activities and movements. Exactly like <a href="https://ppw.kuleuven.be/ogp/labfacilities">Phoda-SeV</a> this tool offers a quick and simple way for therapists to create a fear hierarchy for patients that may be influenced by some degree of fear of movement. </p>
+	<p><a href="https://github.com/artoo-git/OpenPhoda-SeV">OpenPhoda-SeV</a> is a webapp for delivery of the electronic version of the PHODA (Photograph Series of Daily Activities), a diagnostic tool using which uses photographs to determine the threat value of different physical activities and movements. Exactly like <a href="https://ppw.kuleuven.be/ogp/labfacilities">Phoda-SeV</a> this tool offers a quick and simple way for therapists to create a fear hierarchy for patients that may be influenced by some degree of fear of movement. </p>
 
 	<h2 id="minimumrequirement">Minimum Requirement</h2>
 
