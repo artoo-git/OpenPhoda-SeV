@@ -120,12 +120,17 @@ float: right;}
   top: 85%;
   left: 50%;
   touch-action: none;
-  z-index:auto;
+  z-index: 1;
   width: 5em;
   height: 7.5em;
   margin: 0em;
   padding:2px;
   background-color: #29e;
+}
+
+/* Add hover state for better visibility */
+.draggable:hover {
+  z-index: 50;
 }
 
 .submitBtn{
@@ -182,6 +187,7 @@ float: right;}
   border: solid;
   background: linear-gradient(to right,#19d819, #008000, #c11111,#FF0000);
   border: solid 1px;
+  z-index: 0;
 }
 .image{
   /*border-radius: 5px;*/
