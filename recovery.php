@@ -60,8 +60,10 @@ if ($_POST['recover_password']) {
 </head>
 <body>
     <h2>Password Recovery</h2>
-    <p>Enter your experiment name and the recovery code that was provided when you first registered your experiment.
-     If you have saved your recovery code, you can reset your password immediately using the form below.</p>
+    <p> in July 2025 I implemented a recovery code process to allow for self-service password recovery.</p>
+    <p><b>How does it work:</b></p>
+    <p>Enter your experiment name and the recovery code that was provided when you first registered your experiment.</p>
+    <p>If you have saved your recovery code, you can reset your password immediately using the form below.</p>
     
     <?php if (isset($error)): ?>
         <div style="color: red; padding: 10px;"><?php echo htmlspecialchars($error); ?></div>
@@ -89,8 +91,7 @@ if ($_POST['recover_password']) {
     </form>
 
     <p><strong>If you don't have a recovery code or have lost it:</strong></p>
-    <p>Contact the system administrator for assistance:</p>
-    <p><a href="mailto:d.vitali@ucl.ac.uk" class="email-link">d.vitali@ucl.ac.uk</a></p>
+    <p>Contact the system administrator for assistance:<a href="mailto:d.vitali@ucl.ac.uk" class="email-link">d.vitali@ucl.ac.uk</a></p>
     
     <p><a href="index.php">Back to Login</a></p>
 </body>

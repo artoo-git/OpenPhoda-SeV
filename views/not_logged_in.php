@@ -11,8 +11,12 @@
 	</form>
 	<form action="register.php">
 	<tr><td></td></tr>
-    <tr><td><button class="button" type="submit" name="register" value="register">register</button></td></tr>
+        <tr><td><button class="button" type="submit" name="register" value="register">register</button></td></tr>
 	</form>
+       	<tr><td style="text-align: right; padding-top: 10px;">
+		<a href="recovery.php" style="color: #007cba; text-decoration: none; font-size: 12px;">password recovery</a>
+	</td></tr>
+
 	</table>
 
 </div>

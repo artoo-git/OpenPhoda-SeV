@@ -109,7 +109,7 @@ class Register
 
                 $exp_password_hash = password_hash($exp_password, PASSWORD_DEFAULT, array('cost' => $hash_cost_factor));
                 
-                // RECOVERY CODE GENERATION - Add this line
+                // RECOVERY CODE GENERATION 
                 $recovery_code = strtoupper(substr(bin2hex(random_bytes(8)), 0, 16));
                 
                 // write new exp data into database - MODIFIED INSERT
@@ -132,7 +132,7 @@ class Register
                 $q_ins_new_exp->bindValue(':recovery_code', $recovery_code, PDO::PARAM_STR); // ADD THIS LINE
                 $q_ins_new_exp->execute();
                 
-                // DISPLAY RECOVERY CODE TO USER - Add this section
+                // DISPLAY RECOVERY CODE TO USER 
                 ?>
                 <div style="background: #fffacd; padding: 20px; border: 3px solid #ffd700; margin: 20px; text-align: center;">
                     <h2 style="color: #d32f2f;">IMPORTANT: Save Your Recovery Code</h2>
@@ -157,7 +157,6 @@ class Register
                 <?php
                 
                 // Don't redirect immediately - let user see the recovery code
-                // header("location:index.php"); // COMMENT OUT OR REMOVE THIS LINE
             }
         }
     }
