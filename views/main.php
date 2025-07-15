@@ -1,21 +1,19 @@
 <?php include('_header.php');
 ?>
-
-
-<div style="text-align:left" class="boxcenter">
-	<div class="menu" >
-		OpenPhoda-SeV
-	</div>
-	<div >
-		
-		<table align="right"><tr>
-		<td><form action="exp.php" method="GET">
-			<input type="hidden" name="logout" value = "logout">
-			<button class="menubtn" type="submit" value="logout">logout</button></form></td>
-		</tr></table>
-
-	</div>
-
+<div style="text-align:left;" class="boxcenter">
+    <div class="menu">
+        <div style="float: left;">
+            OpenPhoda-SeV
+        </div>
+        
+        <div style="float: right; font-size: 12px; margin-top: 5px;">
+            <strong>Welcome, <?php echo htmlspecialchars($_SESSION['exp_name']); ?></strong><br>
+            <a href="password_change.php">Change Password</a> | 
+            <a href="exp.php?logout=logout">Logout</a>
+        </div>
+        
+        <div style="clear: both;"></div>
+    </div>
 </div>
 
 <div style="background:#FFFFFF">
