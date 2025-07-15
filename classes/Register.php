@@ -76,13 +76,12 @@ class Register
     }
 
 
-    private function registerNewExp($exp_name, $exp_password,$exp_princ_inv)
+    private function registerNewExp($exp_name, $exp_password, $exp_princ_inv)
     {
         // we just remove extra space on expname 
-        $exp_name  = trim($exp_name);
-        $exp_princ_inv  = trim($exp_princ_inv);
+        $exp_name = trim($exp_name);
+        $exp_princ_inv = trim($exp_princ_inv);
 
-       
         if ($this->databaseConnection()) {
 
             // check if expname or email already exists
@@ -98,7 +97,7 @@ class Register
                     if ($result[$i]['exp_name'] == $exp_name){?>
                             <script type="text/javascript"> alert("This experiment name is taken");
                             window.location.href = "register.php";
-                            </script>;
+                            </script>
                             <?php
                             //header("location:". $_SERVER['REQUEST_URI']);
                     }
@@ -109,26 +108,56 @@ class Register
                 $hash_cost_factor = (defined('HASH_COST_FACTOR') ? HASH_COST_FACTOR : null);
 
                 $exp_password_hash = password_hash($exp_password, PASSWORD_DEFAULT, array('cost' => $hash_cost_factor));
-                // write new exp data into database
-
+                
+                // RECOVERY CODE GENERATION - Add this line
+                $recovery_code = strtoupper(substr(bin2hex(random_bytes(8)), 0, 16));
+                
+                // write new exp data into database - MODIFIED INSERT
                 $q_ins_new_exp = $this->db_connection->prepare("INSERT INTO experiments (
                         exp_name, 
                         exp_password_hash, 
                         exp_princ_inv,
+                        exp_recovery_code,
                         exp_registration_datetime) 
                     VALUES(
                         :exp_name, 
                         :exp_password_hash, 
                         :exp_princ_inv,
+                        :recovery_code,
                         NOW())");
 
                 $q_ins_new_exp->bindValue(':exp_name', $exp_name, PDO::PARAM_STR);
                 $q_ins_new_exp->bindValue(':exp_password_hash', $exp_password_hash, PDO::PARAM_STR);
                 $q_ins_new_exp->bindValue(':exp_princ_inv', $exp_princ_inv, PDO::PARAM_STR);
+                $q_ins_new_exp->bindValue(':recovery_code', $recovery_code, PDO::PARAM_STR); // ADD THIS LINE
                 $q_ins_new_exp->execute();
-                #$q_ins_new_exp->debugDumpParams();
-                #header("location:". $_SERVER['REQUEST_URI']);
-                header("location:index.php");
+                
+                // DISPLAY RECOVERY CODE TO USER - Add this section
+                ?>
+                <div style="background: #fffacd; padding: 20px; border: 3px solid #ffd700; margin: 20px; text-align: center;">
+                    <h2 style="color: #d32f2f;">IMPORTANT: Save Your Recovery Code</h2>
+                    <div style="font-size: 28px; font-weight: bold; color: #000; background: white; padding: 10px; border: 2px solid #333; letter-spacing: 2px;">
+                        <?php echo htmlspecialchars($recovery_code); ?>
+                    </div>
+                    <p style="font-size: 16px; margin-top: 15px;">
+                        <strong>Write this code down and store it safely!</strong><br>
+                        You will need this code if you ever forget your password.
+                    </p>
+                    <p style="color: #d32f2f; font-weight: bold;">
+                        This code will NOT be shown again!
+                    </p>
+                </div>
+                <script>
+                    // Auto-redirect after 15 seconds to ensure user sees the code
+                    setTimeout(function(){ 
+                        window.location.href = "index.php"; 
+                    }, 15000);
+                </script>
+                <p style="text-align: center;">You will be redirected to the main page in 15 seconds...</p>
+                <?php
+                
+                // Don't redirect immediately - let user see the recovery code
+                // header("location:index.php"); // COMMENT OUT OR REMOVE THIS LINE
             }
         }
     }
