@@ -98,7 +98,7 @@ class Register
                     if ($result[$i]['exp_name'] == $exp_name){?>
                             <script type="text/javascript"> alert("This experiment name is taken");
                             window.location.href = "register.php";
-                            </script>';
+                            </script>;
                             <?php
                             //header("location:". $_SERVER['REQUEST_URI']);
                     }
