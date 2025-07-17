@@ -10,8 +10,16 @@ define("MESSAGE_PASSWORD_EMPTY", "Password field was empty");
 define('LANDING_PAGE', '
 	<h1 id="openphodasev">OpenPhoda-SeV</h1>
 
+	<h2 style="color: #2c5282;">Domain Transition Information</h2>
+	<p>OpenPhoda-SeV is transitioning to a new primary domain: <strong><a href="https://openphoda.net">openphoda.net</a></strong>. During this transition period, the assessment tool remains fully operational on both the current domain (artoo.info) and the new domain (openphoda.net).</p>
+	
+	<p><strong>Important:</strong> All assessment data, participant responses, and research results are maintained in a centralized database system, ensuring complete data continuity regardless of which domain is used to access the tool.</p>
+	
+	<p>Researchers and clinicians are encouraged to update their bookmarks and references to reflect the new domain for future use.</p>
+
 	<p><a href="https://github.com/artoo-git/OpenPhoda-SeV">Open Source version of the Phoda-SeV</a> scale for Chronic Low Back Pain</p>
 
+	<h2> Why developing an open source Phoda-Sev tool?</h2>
 	<p>The University of Leuven releases a proprietary version of the Phoda-SeV in "Windows" format. I thought it may have been useful to create a version of the software which (provided that a browser and internet connection is available) is capable to:</p>
 
 	<ul>
