@@ -12,7 +12,7 @@ OpenPhoda-SeV is a webapp for delivery of the electronic version of the PHODA (P
 
 ### Live versions
 
-A free to use version of OpenPhoda can be found here: [OpenPhoda](https://artoo.info/)
+A free to use version of OpenPhoda can be found here: [OpenPhoda](https://openphoda.net/)
 
 
 ### Screenshots
